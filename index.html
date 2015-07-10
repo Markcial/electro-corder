@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screen recorder!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./node_modules/msr/MediaStreamRecorder.js"> </script>
+    <script type="text/javascript" src="lib/main.js"></script>
+  </head>
+  <body>
+    <h1>Screen recorder</h1>
+    <div id="blinker">Get ready in <div id="seconds">0</div> seconds.</div>
+    <div id="recording" class="hidden">Currently recording</div>
+    <fieldset>
+        <legend>Start capturing</legend>
+        <h3>Parameters</h3>
+        <ol id="recorder_parameters">
+          <li><input type="number" name="duration" placeholder="Duration" value="5" /></li>
+          <li><input type="number" name="delay" placeholder="Delay" value="2" /></li>
+          <li><input type="checkbox" name="cursor" placeholder="Show Cursor" checked="checked" value="1" /></li>
+          <li><input type="number" name="x" placeholder="X coord" value="" /></li>
+          <li><input type="number" name="y" placeholder="Y Coord" value="" /></li>
+          <li><input type="number" name="w" placeholder="Width of recording zone" value="" /></li>
+          <li><input type="number" name="h" placeholder="Height of recording zone" value="" /></li>
+          <li><button id="capture_region">Capture Region</button></li>
+          <li><input type="text" name="output" placeholder="Output file" value="/tmp/foo.gif" /></li>
+        </ol>
+
+        <input id="recording_command" type="text" name="command" value="" placeholder="Resulting command" style="width: 400px;" />
+
+        <button id="start_recording">Record</button>
+
+    </fieldset>
+  </body>
+</html>
