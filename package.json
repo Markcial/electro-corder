@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "main": "main.js",
   "dependencies": {
+    "jquery": "^2.1.4",
     "lodash": "~3.10.0",
     "msr": "~1.2.6",
-    "readwrite-gif": "~0.3.1"
+    "readwrite-gif": "~0.3.1",
+    "timer-stopwatch": "^0.1.6"
   }
 }

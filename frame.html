@@ -25,6 +25,7 @@
      .handle {
        display:block;
        position:absolute;
+       z-index:9;
        -webkit-app-region: no-drag;
      }
      .vside {
@@ -35,10 +36,29 @@
        width:100%;
        height:10px;
      }
+     #close {
+       position:absolute;
+       right:10px;
+       top:10px;
+       font-size:22px;
+       background:white;
+       z-index:10;
+       -webkit-app-region: no-drag;
+       cursor: pointer;
+     }
     </style>
+    <script type="text/javascript">
+    var remote = require('remote');
+    window.onload = function () {
+      document.getElementById('close').onclick = function () {
+        remote.getCurrentWindow().hide();
+      }
+    }
+    </script>
   </head>
   <body style="-webkit-app-region: drag">
       <div id="selection">
+        <div id="close">x</div>
         <div class="handle vside"></div>
         <div class="handle hside"></div>
         <div class="handle vside"></div>
