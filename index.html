@@ -3,19 +3,26 @@
   <head>
     <title>Screen recorder!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./layout/base/styles.css" media="all"></link>
+    <link rel="stylesheet" href="./layout/base/index.css" media="all"></link>
     <script src="./node_modules/msr/MediaStreamRecorder.js"> </script>
     <script type="text/javascript" src="./lib/ui.js"></script>
     <script type="text/javascript" src="./lib/main.js"></script>
   </head>
   <body>
+    <!--
     <h1>Screen recorder</h1>
     <div id="feedback"></div>
+  -->
     <div>
-      <h3>Recorder</h3>
-      <button id="record_start">&#9679;</button>
-      <button id="select_region">Select region</button>
-      <button id="save_as">Save as</button>
+      <!-- <h3>Recorder</h3> -->
+      <nav class="bar">
+        <button id="record_start">&#9679;</button>
+        <button id="select_region">Select region</button>
+        <button id="save_as">Save as</button>
+
+        <input type="file" accept="video/*;capture=camera">
+      </nav>
+      <!--
       <fieldset>
           <legend>Advanced settings</legend>
           <h3>Parameters</h3>
@@ -29,6 +36,7 @@
             <li><input type="text" name="output" placeholder="Output file" value="/tmp/foo.gif" /></li>
           </ol>
       </fieldset>
+    -->
     </div>
     <div id="preview"></div>
   </body>

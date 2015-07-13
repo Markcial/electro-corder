@@ -65,3 +65,14 @@ button#record_start:active {
                 0 -1px 2px 8px hsla(0,0%,0%,.5);
     line-height: 86px;
 }
+
+nav.bar {
+  padding:12px;
+  box-shadow: 0px 0px 1px gray, 0px 0px 2px white;
+}
+
+nav.bar button {
+  background:gray;
+  vertical-align: bottom;
+  margin: 12px;
+}
